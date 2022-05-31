@@ -1,0 +1,13 @@
+/Users/yazhou/Projects/Astar/Astar/bin/Debug/netcoreapp3.1/Astar.deps.json
+/Users/yazhou/Projects/Astar/Astar/bin/Debug/netcoreapp3.1/Astar.runtimeconfig.json
+/Users/yazhou/Projects/Astar/Astar/bin/Debug/netcoreapp3.1/Astar.runtimeconfig.dev.json
+/Users/yazhou/Projects/Astar/Astar/bin/Debug/netcoreapp3.1/Astar.dll
+/Users/yazhou/Projects/Astar/Astar/bin/Debug/netcoreapp3.1/Astar.pdb
+/Users/yazhou/Projects/Astar/Astar/obj/Debug/netcoreapp3.1/Astar.csproj.AssemblyReference.cache
+/Users/yazhou/Projects/Astar/Astar/obj/Debug/netcoreapp3.1/Astar.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yazhou/Projects/Astar/Astar/obj/Debug/netcoreapp3.1/Astar.AssemblyInfoInputs.cache
+/Users/yazhou/Projects/Astar/Astar/obj/Debug/netcoreapp3.1/Astar.AssemblyInfo.cs
+/Users/yazhou/Projects/Astar/Astar/obj/Debug/netcoreapp3.1/Astar.csproj.CoreCompileInputs.cache
+/Users/yazhou/Projects/Astar/Astar/obj/Debug/netcoreapp3.1/Astar.dll
+/Users/yazhou/Projects/Astar/Astar/obj/Debug/netcoreapp3.1/Astar.pdb
+/Users/yazhou/Projects/Astar/Astar/obj/Debug/netcoreapp3.1/Astar.genruntimeconfig.cache
