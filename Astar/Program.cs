@@ -22,7 +22,7 @@ namespace Astar
             Console.WriteLine(test[3]);
             test.RemoveAt(3);
             Console.WriteLine(test[3]);
-            Astar(Maze, new Coords { x = 0, y = 3 }, new Coords { x = 8, y = 4 });
+            Astar(Maze, new Coords { x = 0, y = 3 }, new Coords { x = 8, y = 7 });
         }
         public static void Astar(List<List<int>> Maze, Coords start, Coords end)
         {
@@ -34,7 +34,6 @@ namespace Astar
             while (openList.Count > 0)
             {
                 Console.WriteLine(openList.Count);
-                Console.WriteLine(closeList.Count);
                 Box currentNode = openList[0];
                 int currentIndex = 0;
                 for (var i = 0; i < openList.Count; i++)
@@ -74,24 +73,34 @@ namespace Astar
                 }
                 for (var i = 0; i < children.Count; i++)
                 {
+                    bool checkCloseResult = true;
+                    bool checkOpenResult = true;
                     foreach (var childClosed in closeList)
                     {
-                        if (children[i].position == childClosed.position)
+                        if (children[i].position.x == childClosed.position.x && children[i].position.y == childClosed.position.y)
                         {
-                            continue;
+                            checkCloseResult = false;
+                            break;
                         }
                     }
-                    children[i].g = currentNode.g + 1;
-                    children[i].h = ((children[i].position.x - endNode.position.x) * (children[i].position.x - endNode.position.x)) + ((children[i].position.y - endNode.position.y) * (children[i].position.y - endNode.position.y));
-                    children[i].f = children[i].g + children[i].h;
-                    foreach (var childOpen in openList)
+                    if (checkCloseResult)
                     {
-                        if (children[i] == childOpen && children[i].g > childOpen.g)
+                        children[i].g = currentNode.g + 1;
+                        children[i].h = ((children[i].position.x - endNode.position.x) * (children[i].position.x - endNode.position.x)) + ((children[i].position.y - endNode.position.y) * (children[i].position.y - endNode.position.y));
+                        children[i].f = children[i].g + children[i].h;
+                        foreach (var childOpen in openList)
                         {
-                            continue;
+                            if (children[i].position.x == childOpen.position.x && children[i].position.y == childOpen.position.y && children[i].g > childOpen.g)
+                            {
+                                checkOpenResult = false;
+                                break;
+                            }
+                        }
+                        if (checkOpenResult)
+                        {
+                            openList.Add(children[i]);
                         }
                     }
-                    openList.Add(children[i]);
                 }
             }
         }
